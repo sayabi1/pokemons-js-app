@@ -77,7 +77,7 @@ let bigPokemon = 'Wow, that is big!';
 let smallPokemon ="that is small!"
 
 // forEach loop and conditional statement
-pokemonList.forEach(function (pokemon) {
+pokemonRepository.getAll().forEach(function (pokemon) {
     if (pokemon.height > 1.0) {
    document.write(`<p>${pokemon.name} : (height:${pokemon.height}) - ${bigPokemon},</p>   `); 
 }else {
