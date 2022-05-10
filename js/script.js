@@ -51,12 +51,12 @@ type:['poison','grass']
 let bigPokemon = 'Wow, that is big!';
 let smallPokemon ="that is small!"
 
-// array loop and conditional statement
-for ( let i = 0; i < pokemonList.length; i++) {
-    if (pokemonList[i].height > 1.0) {
-   document.write(`<p>${pokemonList[i].name} : (height:${pokemonList[i].height}) - ${bigPokemon},</p>   `); 
+// forEach loop and conditional statement
+pokemonList.forEach(function (pokemon) {
+    if (pokemon.height > 1.0) {
+   document.write(`<p>${pokemon.name} : (height:${pokemon.height}) - ${bigPokemon},</p>   `); 
 }else {
-    document.write(`<p>${pokemonList[i].name} : (height:${pokemonList[i].height}) - ${smallPokemon},</p>`); 
+    document.write(`<p>${pokemon.name} : (height:${pokemon.height}) - ${smallPokemon},</p>`); 
 }
-document.write("<br>");
-}
+document.write("<br>")
+})
