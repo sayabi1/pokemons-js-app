@@ -62,9 +62,27 @@ let pokemonRepository = (function(){
  function getAll () {
    return pokemonList
  }
+  function showDetails(pokemon) {
+      console.log(pokemon);
+  }
+ function addListItem(pokemon){
+    let pokemons = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    listItem.classList.add("pokemon-list__item")
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('btn');
+    listItem.appendChild(button);
+    pokemons.appendChild(listItem);
+    button.addEventListener("click", function(event) {
+        showDetails(pokemon);
+    });
+ }
  return {
    add: add,
-   getAll: getAll
+   getAll: getAll,
+   addListItem:addListItem,
+   showDetails:showDetails
  }
 
  })();
@@ -78,10 +96,5 @@ let smallPokemon ="that is small!"
 
 // forEach loop and conditional statement
 pokemonRepository.getAll().forEach(function (pokemon) {
-    if (pokemon.height > 1.0) {
-   document.write(`<p>${pokemon.name} : (height:${pokemon.height}) - ${bigPokemon},</p>   `); 
-}else {
-    document.write(`<p>${pokemon.name} : (height:${pokemon.height}) - ${smallPokemon},</p>`); 
-}
-document.write("<br>")
+    pokemonRepository.addListItem(pokemon);
 })
