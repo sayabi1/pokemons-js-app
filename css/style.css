@@ -1,108 +1,59 @@
-.pokemon-list__item  {
+:root {
+    --body-background: #932432;
+    --nav-background: #de354c;
+    --button-background: #3c1874;
+    --hover-background: #283747;
+  }
+  body {
+    background-color: var(--body-background);
+  }
+  .page-container {
+    margin-top: 100px;
+  }
+  
+  .pokemon-list__item {
     list-style-type: none;
-   
-}
-.btn {
+  }
+  .navbar {
+    background-color: var(--nav-background);
+  }
+  .btn-pokemon {
     display: block;
     border: none;
-    font-size: 24px;
     text-transform: uppercase;
-    color: #111;
-    background: olivedrab;
-    height: 50%;
-    width: 50%;
+    color: #f3f3f3;
+    background: var(--button-background);
     margin: 10px;
-    padding: 50px 10px;
     border-radius: 3px;
-    border: 1px solid lightgray;
-    box-shadow: 10px 5px 5px red;
-    text-align: center;
-    position: relative;
-    left: 20%;
-    
-   
-}
-.btn:hover,.btn:focus {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    width: 350px;
+    height: 200px;
+    font: bold;
+    transition: 1s;
+  }
+  .btn-pokemon:hover,
+  .btn-pokemon:focus {
     opacity: 0.8;
-    background-color: lightblue;
-    font-size: 50px;
-    transition-duration: 2s;
-    transition-delay: 2ms;
-}
-#modal-container {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    
-    /* to show it above other content */
-    z-index: 999; 
-    
-    /* to allow scrolling if the screen is not high enough*/
-    overflow: auto; 
-    
-    /* this is used to center the modal */
-    display: grid;
-    text-align: center;
+    font-size: 30px;
+    background-color: var(--hover-background);
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+      rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+      rgb(255, 85, 85) 0px 0px 0px 15px;
+    transition: 1s;
   }
-  .modal {
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 15px;
-    width: 100%;
-    max-width: 700px;
-    text-align: left;
-  }
-  .close-button {
-    float: right;
-    -webkit-appearance: none;
-    border: 0;
-    background: none;
-    color: #777;
-    border: 1px solid lightgrey;
-    box-shadow:5px 5px 5px lightgray; ;
-  }
-  .close-button:hover,.close-button:focus {
-    opacity: 0.8;
-    color: #111;
-    background-color: lightblue;  
-    font-size: 24px;
-    transition-duration: 2s;
-    transition-delay: 2ms;
-    
-}
-  
-  
-  .modal h1 {
-    margin-top: 0;
-    text-transform: uppercase;
-  }
-  
-  .modal p {
-    margin-bottom: 0;
-    font-style: italic;
-  }
-  
-  #modal-container {
-    display: none;
-  }
-  
-  #modal-container.is-visible {
-    /* CSS for modal container - add your own desired CSS styles here */
-    display: block;
-  }  
-@media all and (max-width: 500px) {
-    .btn {
-        font-size: 16px;
+  @media all and (max-width: 500px) {
+    .btn-pokemon {
+      font-size: 16px;
+      height: 100px;
+      width: 200px;
     }
-    .btn:hover,.btn:focus {
-        font-size: 20px;
+    .btn-pokemon:hover,
+    .btn-pokemon:focus {
+      font-size: 20px;
     }
-
-}
+  }
+  
