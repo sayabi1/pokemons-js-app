@@ -53,6 +53,9 @@
     transition: 1s;
   }
   @media all and (max-width: 500px) {
+    .page-container {
+      margin-top: 150px;
+    }
     .btn-pokemon {
       font-size: 16px;
       height: 100px;
