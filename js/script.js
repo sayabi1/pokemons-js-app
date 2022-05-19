@@ -58,7 +58,6 @@ let pokemonRepository = (function () {
       return response.json();
     }).then(function (details) {
       // Now we add the details to the pokemon
-      pokemon.name = pokemon.name
       pokemon.imageUrl = details.sprites.front_default;
       pokemon.height = details.height;
       pokemon.weight = details.weight;
