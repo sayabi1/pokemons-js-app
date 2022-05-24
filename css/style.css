@@ -47,10 +47,7 @@
     opacity: 0.8;
     font-size: 30px;
     background-color: var(--hover-background);
-    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
-      rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
-      rgb(255, 85, 85) 0px 0px 0px 15px;
-    transition: 1s;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   }
   @media all and (max-width: 500px) {
     .page-container {
